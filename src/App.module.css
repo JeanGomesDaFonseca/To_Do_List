@@ -1,0 +1,18 @@
+.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+    font-family: 'Poppins', sans-serif;
+    color: #da2535;
+    mix-blend-mode: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+}
