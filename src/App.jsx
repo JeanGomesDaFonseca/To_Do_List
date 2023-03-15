@@ -1,4 +1,4 @@
-import { Button, Container, Input } from "./styles"
+import { Button, Container, Input, Item } from "./styles"
 import styles from "./App.module.css"
 
 export default function App() {
@@ -8,6 +8,16 @@ export default function App() {
     <div className={styles.container}>
       <Input placeholder="Digite sua tarefa" />
       <Button>Adicionar</Button>
+      </div>
+      <div>
+        <ul>
+          <Item>Estudar React js</Item>
+          <Item>Estudar React js</Item>
+          <Item>Estudar React js</Item>
+          <Item>Estudar React js</Item>
+          <Item>Estudar React js</Item>
+
+        </ul>
       </div>
     </Container>
   )
