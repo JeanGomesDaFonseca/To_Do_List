@@ -1,26 +1,26 @@
 import styled, { createGlobalStyle } from "styled-components";
+import App from './../App';
 
 export const GlobalStyle = createGlobalStyle`
 *{
     margin: 0 auto;
     padding: 0;
-    border-sizing: border-box;
     text-decoration: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
 }`
 
 export const Container = styled.div`
-    width: 450px;
-    min-height: 895px; //mudar se precisar
+    margin-top:55px;
+    width: 80%;
+    height: 800px;
     background: rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
     display: flex;
     flex-direction: column;
-    align-itens: center;
-    padding: 12px 25px
+    align-items: center;
 `
 
 export const Input = styled.input`
@@ -44,14 +44,6 @@ line-height: 24px;
 color: #da2535;
 }
 `
-
-// export const Flex = styled.div`
-// display: flex;
-// flex-direction: column;
-// justify-content: center;
-// align-items: center;
-// `
-
 export const Button = styled.button`
 width: 112px;
 height: 50px;
@@ -77,9 +69,34 @@ border-radius: 10px;
 margin-top: 20px;
 list-style: none;
 
+display: flex;
+align-items: center;
+justify-content: space-between;
+
 font-weight: 500;
 font-size: 16px;
 line-height: 42px;
 color: #FFFFFF;
 text-decoration-line: line-through;
+
+
+div{
+    display:flex;
+    margin-left: 150px;
+    gap:10px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.6;
+    }
+}
 `;
