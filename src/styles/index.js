@@ -90,6 +90,11 @@ p {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
+
+    width: 80%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
   }
 
 
