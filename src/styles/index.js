@@ -57,13 +57,20 @@ font-size: 16px;
 line-height: 24px;
 color: #fbfbfb;
 cursor: pointer;
+
+&:hover{
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.6;
+    }
 `
 
 export const Item = styled.li`
 padding: 8px 10px 8px 24px;
 width: 354px;
 height: 40px;
-background: #da2535;
+background: ${(props) => (props.checked ? "#da2535" : "#FFF")};
 box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 border-radius: 10px;
 margin-top: 20px;
@@ -76,20 +83,20 @@ justify-content: space-between;
 font-weight: 500;
 font-size: 16px;
 line-height: 42px;
-color: #FFFFFF;
-text-decoration-line: line-through;
+color: ${(props) => (props.checked ? "#FFF" : "#000")};
+text-decoration-line: ${(props) => (props.checked ? "line-through" : "")};
 
 
 div{
     display:flex;
-    margin-left: 150px;
+    justify-content: space-between;
     gap:10px;
 }
 
 button {
     background: transparent;
     border: none;
-    color: #FFFFFF;
+    color: ${(props) => (props.checked ? "#FFF" : "#000")};
     cursor: pointer;
 
     &:hover{
