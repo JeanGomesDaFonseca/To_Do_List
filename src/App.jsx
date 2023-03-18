@@ -3,6 +3,7 @@ import styles from "./App.module.css"
 import Delete from '@mui/icons-material/DeleteForever';
 import Check from '@mui/icons-material/CheckCircleOutline';
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function App() {
 
@@ -10,7 +11,20 @@ export default function App() {
   const [listTarefas, setListTarefas] = useState([]);
 
   const addTarefa = () => {
-    if (!tarefa) return alert('Escreva uma tarefa');
+    if (!tarefa) return alert('Digite uma Tarefa!!!')
+
+    // ajuda para implementar**
+
+  //  const error =  toast.error('🦄 Digite uma Tarefa!', {
+  //     position: "top-center",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: "light",
+  //     });
     const novaTarefa = {
       id: Math.random(),
       tarefa: tarefa,
