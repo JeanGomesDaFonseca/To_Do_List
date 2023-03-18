@@ -67,24 +67,30 @@ cursor: pointer;
 `
 
 export const Item = styled.li`
-padding: 8px 10px 8px 24px;
+padding: 13px 10px 13px 24px;
 width: 354px;
-height: 40px;
+min-height: 50px;
 background: ${(props) => (props.checked ? "#da2535" : "#FFF")};
 box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 border-radius: 10px;
-margin-top: 20px;
 list-style: none;
-
+flex-wrap: wrap;
 display: flex;
 align-items: center;
 justify-content: space-between;
+margin-top: 30px;
 
-font-weight: 500;
-font-size: 16px;
-line-height: 42px;
-color: ${(props) => (props.checked ? "#FFF" : "#000")};
-text-decoration-line: ${(props) => (props.checked ? "line-through" : "")};
+p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: ${(props) => (props.checked ? "line-through" : "")};
+    color: ${(props) => (props.checked ? "#ffffff" : "#000000")};
+    width: 80%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
 
 
 div{
