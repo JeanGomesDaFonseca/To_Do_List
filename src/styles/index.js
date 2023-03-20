@@ -81,7 +81,7 @@ justify-content: space-between;
 margin-top: 30px;
 
 @media (max-width: 500px) {
-    width: 100%;
+    width: 80%;
 }
 
 p {
