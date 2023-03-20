@@ -80,6 +80,10 @@ align-items: center;
 justify-content: space-between;
 margin-top: 30px;
 
+@media (max-width: 500px) {
+    width: 100%;
+}
+
 p {
     font-weight: 500;
     font-size: 16px;
