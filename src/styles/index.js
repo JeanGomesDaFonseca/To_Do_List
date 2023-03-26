@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
     margin-top:55px;
-    width: 80%;
+    width: 90%;
     height: 800px;
     background: rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -79,6 +79,10 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 margin-top: 30px;
+
+@media (max-width: 500px) {
+    width: 80%;
+}
 
 p {
     font-weight: 500;
