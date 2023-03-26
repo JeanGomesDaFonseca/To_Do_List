@@ -4,6 +4,9 @@ import Delete from '@mui/icons-material/DeleteForever';
 import Check from '@mui/icons-material/CheckCircleOutline';
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { Switch } from "@mui/material";
+import { Label } from "@material-ui/icons";
+
 
 export default function App() {
 
@@ -15,16 +18,16 @@ export default function App() {
 
     // ajuda para implementar**
 
-  //  const error =  toast.error('🦄 Digite uma Tarefa!', {
-  //     position: "top-center",
-  //     autoClose: 5000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: true,
-  //     draggable: true,
-  //     progress: undefined,
-  //     theme: "light",
-  //     });
+    //  const error =  toast.error('🦄 Digite uma Tarefa!', {
+    //     position: "top-center",
+    //     autoClose: 5000,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: "light",
+    //     });
     const novaTarefa = {
       id: Math.random(),
       tarefa: tarefa,
@@ -40,15 +43,30 @@ export default function App() {
   }
 
   const concluido = (id, checked) => {
-
     const index = listTarefas.findIndex((tarefa) => tarefa.id === id);
     const newList = listTarefas
     newList[index].checked = !checked;
     setListTarefas([...newList]);
   }
 
+  const [colorMode, setColorMode] = useState('white-mode');
+  const darkModeChange = () => {
+    if(colorMode === 'white-mode'){
+      setColorMode('dark-mode');
+    }else{
+      setColorMode('white-mode');
+    }
+  }
+
   return (
-    <Container>
+    <Container className={colorMode}>
+      <Switch 
+      onChange={darkModeChange}
+      checked={colorMode === 'dark-mode'}
+      id="color-mode"
+      type="checkbox"
+      />
+      
       <h1 className={styles.title}>To Do List</h1>
       <div className={styles.container}>
         <Input

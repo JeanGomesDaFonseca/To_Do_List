@@ -15,3 +15,12 @@
     align-items: center;
 }
 
+.white-mode {
+    background-color: white;
+  }
+  
+  .dark-mode {
+    filter: invert(100%);
+    background-color: black;
+  }
+
